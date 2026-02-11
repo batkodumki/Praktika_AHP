@@ -1,0 +1,271 @@
+.friends-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) 0;
+}
+
+/* Tabs */
+.friends-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.friends-tab {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.friends-tab:hover {
+  color: var(--text-primary);
+  background: rgba(74, 144, 226, 0.05);
+}
+
+.friends-tab.active {
+  color: var(--primary-blue);
+  border-bottom-color: var(--primary-blue);
+}
+
+/* Content */
+.friends-content {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* Add Friend Section */
+.add-friend-section {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.add-friend-form {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.add-friend-form .form-input {
+  flex: 1;
+}
+
+/* Friends List */
+.friends-list h3,
+.friend-requests-list h3,
+.invitations-list h3 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.friend-item,
+.friend-request-item,
+.invitation-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  transition: all 0.2s ease;
+}
+
+.friend-item:hover,
+.friend-request-item:hover,
+.invitation-item:hover {
+  background: var(--bg-tertiary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.friend-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.friend-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend-info {
+  flex: 1;
+}
+
+.friend-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.friend-email {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.friend-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* Invitations */
+.invitation-info {
+  flex: 1;
+}
+
+.invitation-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.invitation-owner {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.invitation-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.chat-header {
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.chat-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.message {
+  margin-bottom: var(--spacing-md);
+  max-width: 70%;
+}
+
+.message-sent {
+  margin-left: auto;
+}
+
+.message-received {
+  margin-right: auto;
+}
+
+.message-content {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  word-wrap: break-word;
+}
+
+.message-sent .message-content {
+  background: var(--primary-blue);
+  color: white;
+  border-bottom-right-radius: var(--spacing-xs);
+}
+
+.message-received .message-content {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-bottom-left-radius: var(--spacing-xs);
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xs);
+  padding: 0 var(--spacing-md);
+}
+
+.chat-input-form {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.chat-input-form .form-input {
+  flex: 1;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: var(--spacing-xl);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .friends-tabs {
+    overflow-x: auto;
+  }
+
+  .friends-tab {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .add-friend-form {
+    flex-direction: column;
+  }
+
+  .friend-item,
+  .friend-request-item,
+  .invitation-item {
+    flex-wrap: wrap;
+  }
+
+  .friend-actions,
+  .invitation-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .chat-container {
+    height: 500px;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+}

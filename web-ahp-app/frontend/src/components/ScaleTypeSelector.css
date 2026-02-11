@@ -1,0 +1,58 @@
+.scale-type-selector {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.scale-type-label {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.scale-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scale-type-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scale-type-option:hover {
+  border-color: #4A90E2;
+  background: #f0f7ff;
+}
+
+.scale-type-option input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.scale-type-option input[type="radio"]:checked + .scale-type-name {
+  color: #4A90E2;
+  font-weight: 600;
+}
+
+.scale-type-name {
+  font-weight: 500;
+  min-width: 80px;
+  color: #333;
+}
+
+.scale-type-description {
+  font-size: 0.85rem;
+  color: #666;
+}
